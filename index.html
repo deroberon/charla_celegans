@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!--<link rel="stylesheet" href="plugin/toc-progress/toc-progress.css">-->
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="celegans1.jpg">
+					<h1>C. Elegans</h1>
+				</section>
+				<section>
+					<h2>Quien es C. Elegans?</h2>
+					<p><i>Caenorhabditis elegans</i> es un verme del filo nematoda</p>
+					<p>Es un <i>pseudocelomado</i> sin sistemas respiratórios y circulatorios</p>
+					<p>Son en mayoria hermafroditas, pero hay machos</p>
+					<p>Simetrico bilateralmente y no segmentado</p>
+				</section>
+				<section>
+					<h2>Y Que tienen de especial?</h2>
+					<p>Tienen un ciclo embriológico corto (16h)</p>
+					<p>Son transparentes</p>
+					<p>Tienen exactas 959 celulas somáticas (hermafroditas)</p>
+					<p>Tienen exactas 302 neuronas (hermafroditas)</p>
+					<p>Su genoma foe completamente secuenciado</p>
+					<p>Su conectoma foe completamente pesquisado</p>
+				</section>
+				<section>
+					<h2>Solo eso?</h2>
+					<p>Tiene una evolución previsible y constante</p>
+					<p>Es fácil de cultivar en laboratorios</p>
+					<p>Si alimenta de bacterias (E.Coli en lab)</p>
+					<p>Fácil de conseguir (incluso las variaciones geneticas)</p>
+					<p>Amplamente estudado</p>
+				</section>
+				<section>
+					<h1>Anatomia de C. Elegans</h1>
+				</section>
+				<section data-background="anatomia1.svg">
+					
+				</section>
+				<section>
+					<h1>Desarollo Embriológico</h1>
+				</section>
+				<section>
+					<img src="embriologia0.jpg" width="60%" />
+				</section>
+				<section>
+					<img src="embriologia1.jpg" width="60%" />
+				</section>
+				<section>
+					<h1>Conectoma</h1>
+				</section>
+				<section>
+					<h1>Usos en Robotica</h1>
+				</section>
+				<section>
+					<h2>Connectome GoPiGo</h2>
+					<p>Open Connectome Engine</p>
+					<p><a href="https://github.com/Connectome/GoPiGo">https://github.com/Connectome/GoPiGo</a></p>
+				</section>
+				<section>
+					<h2>Nematoduino</h2>
+					<p>Una version de PiGoPi para Arduino, por Nathan Griffith</p>
+					<p>Posui un conversor del conectome codificado en python en GoPiGo para Json, lo que es muy util</p>
+					<p><a href="https://github.com/nategri/nematoduino">https://github.com/nategri/nematoduino</a></p>
+					<p>Hay una implementación en C puro tambien, hecha por la misma persona</p>
+					<p><a href="https://github.com/nategri/c_matoduino">https://github.com/nategri/c_matoduino</a></p>
+				</section>
+				<section>
+					<h2>Una simulación mas compleja</h2>
+					<p><a href="https://github.com/adammarblestone/simple-C-elegans">https://github.com/adammarblestone/simple-C-elegans</a></p>
+				</section>
+				<section>
+					<h2>OpenWorm en Github</h2>
+					<p>Muchos Proyectos. En especial, Geppetto. Es un tanto complejo de instalar, pero funciona bien</p>
+					<p><a href="https://github.com/openworm">https://github.com/openworm</a></p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				math: {
+		mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+		config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	},
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/math/math.js', async: true },
+					//{ src: 'plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } },
+
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
